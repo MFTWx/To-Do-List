@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', arial, helvetica, sans-serif;
+}
+
+/* rem -> root element -> vw -> berdasarkan ukuran layar / ngambil dari tag html */
+/* rem -> ngomong aja html nya 16 px, contoh ada tag h1 32 px dan dalamnya ada tag a yang berukuran 2 rem artinya 2 x html = 32 jadi tag a 32 px ngikutin size html */
+
+/* em -> element -> % -> ngambil dari parent element */
+/* em > ukurannya font em x (dikali) size parent, contoh h1 32 dan dalam h1 ada tag a yang berukuran 2 em artinya 2 x 32 = 64 pixel untuk ukuran a */
+
+/* percent (%) ngambil dari parent */
+/* vw ngambil dari html */
+
+body {
+    width: 100%;
+    height: 100vw;
+    background-color: whitesmoke;
+}
+
+.container {
+    border-radius: 15px;
+}
+
+.title {
+    padding: 2rem 3rem;
+    font-size: 1.5 rem;
+    text-align: center;
+    background-color: #ca5448;
+    color: whitesmoke;
+}
+
+.input-to-do-list {
+    /* background-color: blue; */
+    font-size: 1.5rem;
+    margin: 2rem 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-list {
+    margin: 2rem 3rem;
+}
+
+.addBtn {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 5%;
+    background: none;
+    border: none;
+    background-color: rgb(255, 92, 74);
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.task{
+    margin: 1rem 0.5rem;
+    display: flex;
+    /* flex bisa ngebuat jadi kolom -> dari blok jadi sejajar */
+    justify-content: space-around;
+    border-bottom: 0.3px solid grey;
+}
+
+input {
+    padding: 1rem 1.2rem;
+    width: 92%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none; 
+    /* text inputnya ga ada border */
+    background: none;
+    /* text inputnya ga ada border putih -> di layar cuman ada tulisan placeholder jadi keliatan kaya transparan boxnya */
+}
+
+::placeholder {
+    color: rgb(255, 92, 74);
+    font-style: italic;
+}
+
+input:disabled {
+    color: black;
+}
+
+.editBtn, .deleteBtn {
+    padding: 1rem 1.2rem;
+    width: 50%;
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    color: rgb(255, 92, 74);
+}
